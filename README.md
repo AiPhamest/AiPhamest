@@ -16,14 +16,6 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 
 ---
 
-## 📷 Quick demo
-
-| Scan | Extract | Plan | Warn |
-|------|---------|------|------|
-| ![Scan demo](docs/screens/scan.png) | ![Extract demo](docs/screens/extract.png) | ![Plan screen](docs/screens/schedule.png) | ![Warning screen](docs/screens/warning.png) |
-
----
-
 ## 🏆 Key features
 
 | Category | What we built |
