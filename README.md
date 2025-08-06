@@ -26,7 +26,7 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 | **Voice / text side‑effect logger** | Wear‑friendly mic input; offline speech‑to‑text optional. |
 | **On‑device causal analysis** | Background WorkManager job rates severity & confidence, then suggests next steps. |
 | **Real‑time warnings & tips** | `RecommendationsWorker` streams concise do’s & don’ts for each medicine, with 🔴 / 🟡 / 🟢 severity tags. |
-| **Emergency fallback** | Critical events can auto‑send SMS or place a call to a pre‑saved contact. |
+| **Emergency fallback** | Critical events can auto‑send SMS or place a call to a pre‑saved contact. (Upcoming) |
 | **Privacy by design** | No account, no backend, no analytics. All data lives in an AES‑encrypted Room DB. |
 
 ---
@@ -42,7 +42,21 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 
 ---
 
+## ⚠️ Known Limitations & Notes
 
+- ⏱️ **Initial extraction may take up to 2 minutes**, as the app runs the Gemma 3n model twice:
+  1. First to extract structured prescription data from the image
+  2. Then to match the extracted drug name against entries in `drug.txt`
+
+- 🎙️ **Voice input currently uses Google's on-device speech recognition API.**  
+  This will be replaced with **Gemma 3n’s audio model for Android** once it becomes available.
+
+- 📂 **To improve extraction accuracy**, please add relevant **drug names to the `drug.txt` file** in the app’s `/assets/` folder **before extracting prescriptions**.  
+  This helps the app match medications more precisely.
+
+- 🔧 The model will be fine-tuned in future iterations to include comprehensive datasets for **drug names, side effects, and drug interactions**, improving reasoning and recommendations.
+
+---
 
 
 ## 🚀 Getting started
@@ -57,7 +71,7 @@ cd aiphamest
 #    internal const val HF_TOKEN = "<hf_your_token_here>"
 
 # 3. Build & run with Android Studio Hedgehog (AI‑23) or newer.
-#    Works on any device API‑26+ with ≥ 6 GB RAM.
+
 ```
 
 > ℹ️ **First launch** downloads a ~4 GB quantised Gemma model directly into *app‑private storage*. A built‑in progress UI handles flaky connections & resumes interrupted downloads.
