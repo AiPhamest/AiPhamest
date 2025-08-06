@@ -98,8 +98,7 @@ cd aiphamest
 ## 🙌 Acknowledgements
 
 - Google Research & DeepMind for **Gemma 3n**.  
-- MediaPipe Tasks GenAI team for the early vision+text API.  
-- UnsLoth for open‑source quantisation notebooks.
+- MediaPipe Tasks GenAI team for the early vision+text API.
 
 ---
 
