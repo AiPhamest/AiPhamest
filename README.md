@@ -63,7 +63,7 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 
 ```bash
 # 1. Clone
-git clone https://github.com/your‑org/aiphamest.git
+git clone https://github.com/AiPhamest/AiPhamest
 cd aiphamest
 
 # 2. Insert your Hugging Face token
