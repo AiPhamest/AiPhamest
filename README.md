@@ -83,9 +83,9 @@ This includes:
 git clone https://github.com/AiPhamest/AiPhamest
 cd aiphamest
 
-# 2. Insert your Hugging Face token
-#    app/llm/ModelStore.kt
-#    internal const val HF_TOKEN = "<hf_your_token_here>"
+// 2. Insert your Hugging Face token
+// File: app/llm/ModelStore.kt
+internal const val HF_TOKEN = "<hf_your_token_here>"
 
 # 3. Build & run with Android Studio Hedgehog (AI‑23) or newer.
 
