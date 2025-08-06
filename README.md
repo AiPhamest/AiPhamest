@@ -31,6 +31,44 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 
 ---
 
+## 🧪 How to Use AiPhamest
+
+Follow these steps to get started with the app:
+
+1. 🔑 **Insert your Hugging Face token**  
+   Open `app/llm/ModelStore.kt` and set:  
+   `internal const val HF_TOKEN = "<hf_your_token_here>"`
+
+2. 📸 **Capture a photo of the prescription** or upload one from storage.
+
+3. ⬇️ **On first use**, the Gemma 3n model (~4 GB) will begin downloading into app-private storage.  
+   A progress UI will manage resumable downloads.
+
+4. 🤖 **Gemma 3n processes the prescription image** and extracts structured medication details.
+
+5. 👀 **Review the extracted text** (medicine name, dosage, frequency) on screen.
+
+6. 📦 **Enter the medication pack size**, e.g., "30p" (pills) or "100ml".
+
+7. 💾 **Press “Save and Start First Dose”** – the first dose button will appear.
+
+8. 🕒 When ready, **tap "Start First Dose"** and choose the appropriate medication.
+
+9. 📆 **A schedule will be created automatically** and will run until the pack is completed.
+
+10. 💬 **Tap on any schedule card** to request Gemma 3n to provide **intake recommendations** for that specific medication.
+
+11. 🤕 **Report side effects** via text or voice (offline speech-to-text supported).
+
+12. 🧠 **Gemma 3n processes side effects in the background** and:
+    - Evaluates symptom severity
+    - Sends relevant warnings to the **Warning Screen**
+
+13. ⚠️ **Important:** Please **do not submit multiple side effects simultaneously**.  
+    Wait for the warning card to appear before submitting another.
+
+---
+
 ## 🛠 Tech stack
 
 - **Android 14** – Kotlin, Jetpack Compose, CameraX, WorkManager  
