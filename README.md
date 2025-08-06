@@ -1,8 +1,8 @@
 # 🤖 AiPhamest – 100 % offline. Life‑saving by design
 
-**AiPhamest** is an on‑device Android assistant that keeps you safe, informed, and on‑track with your medication—*without ever sending your data to the cloud.*
+**AiPhamest** AiPhamest is an intelligent, offline medical assistant that uses Gemma 3n to automate prescription understanding, build smart medication schedules, and monitor side effects — all while ensuring patient safety through drug interaction analysis, allergy checks, and emergency alerts.*
 
-Powered by Google’s lightweight **Gemma 3n** multimodal model, AiPhamest reads paper prescriptions, schedules intelligent reminders, analyses side‑effects, and serves bite‑size guidance—all **completely offline**.
+Built entirely with on-device multimodal AI, AiPhamest helps patients adhere to their medication plans and catch potentially dangerous side effects, even without internet access. The system blends structured LLM reasoning, man-in-the-loop verification, and real-time alerting for critical drug-related risks. **completely offline**.
 
 ---
 
