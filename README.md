@@ -58,6 +58,23 @@ AiPhamest fixes this with an entirely **edge‑first** stack—bringing AI pharm
 
 ---
 
+## 🧠 LLM Integration Code Path
+
+All code related to the **Gemma 3n on-device model integration** is located in: "app/src/main/java/com/example/AiPhamest/llm/"
+
+This includes:
+
+- "PrescriptionExtractor.kt" – Handles structured OCR from prescription images using Gemma 3n vision model  
+- "DrugNormalizer.kt" – Resolves fuzzy medicine names to canonical drug terms using deterministic text inference  
+- "RecommendationChecker.kt" – Provides concise contextual advice for each medication (e.g. “take after food”)  
+- "SideEffectChecker.kt" – Analyzes user-reported symptoms in relation to medication history  
+- "LlmModelStore.kt" – Manages model download, caching, and access (using Hugging Face + MediaPipe Tasks GenAI)  
+- "Fuzzy.kt" – Lightweight string matcher used for shortlist generation prior to model disambiguation
+
+> These components form the LLM inference pipeline used throughout the app to support structured extraction, intelligent scheduling, and offline reasoning — all powered by **Gemma 3n**, completely on-device.
+
+---
+
 
 ## 🚀 Getting started
 
